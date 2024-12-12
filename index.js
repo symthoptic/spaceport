@@ -1,9 +1,3 @@
-//
-//  * Fixed-Heliactyl
-// 
-//  * Heliactyl 12.8 (Based off of 12.7), Codename Flameing
-//  * Copyright SRYDEN, Inc. & Overnode projets
-//
 "use strict";
 
 // Load packages.
@@ -50,23 +44,23 @@ module.exports.app = app;
 const listener = app.listen(settings.website.port, async () => {
   console.clear();
   console.log(`${chalk.bgBlue("  APPLICATION IS ONLINE  ")}\n`);
-  console.log(`${chalk.cyan("[Heliactyl]")}${chalk.white(" Checking for updates...")}`);
+  console.log(`${chalk.grey("[Graphene]")}${chalk.white(" Checking for updates...")}`);
 
   try {
-    const response = await fetch('https://api.github.com/repos/OvernodeProjets/Fixed-Heliactyl/releases/latest');
+    const response = await fetch('https://api.github.com/repos/symthoptic/spaceport/release/lastest");
     const { tag_name: latestVersion } = await response.json();
 
     if (latestVersion !== settings.version) {
-      console.log(`${chalk.cyan("[Heliactyl]")}${chalk.yellow(" New version available!")}`);
-      console.log(`${chalk.cyan("[Heliactyl]")}${chalk.white(` Current Version: ${settings.version}, Latest Version: ${latestVersion}`)}`);
+      console.log(`${chalk.grey("[Graphene]")}${chalk.yellow(" New version available!")}`);
+      console.log(`${chalk.grey("[Graphene]")}${chalk.white(` Current Version: ${settings.version}, Latest Version: ${latestVersion}`)}`);
     } else {
-      console.log(`${chalk.cyan("[Heliactyl]")}${chalk.white(" Your application is up-to-date.")}`);
+      console.log(`${chalk.grey("[Graphene]")}${chalk.white(" Your application is up-to-date.")}`);
     }
   } catch (error) {
-    console.error(`${chalk.cyan("[Heliactyl]")}${chalk.red(" Error checking for updates:")} ${error.message}`);
+    console.error(`${chalk.grey("[Graphene]")}${chalk.red(" Error checking for updates:")} ${error.message}`);
   }
 
-  console.log(`${chalk.cyan("[Heliactyl]")}${chalk.white(" You can now access the dashboard at ")}${chalk.underline(`${settings.oauth2.link}/`)}`);
+  console.log(`${chalk.grey("[Graphene]")}${chalk.white(" You can now access the dashboard at ")}${chalk.underline(`${settings.oauth2.link}/`)}`);
 });
 
 const rateLimitCache = new Map();
