@@ -1,9 +1,9 @@
 {
-  "name": "fixed-heliactyl",
-  "version": "12.8.0",
+  "name": "spaceport",
+  "version": "19.0.0",
   "description": "The best Pterodactyl client area.",
   "main": "index.js",
-  "author": "Overnode",
+  "author": "Symthoptic",
   "dependencies": {
     "better-sqlite3": "^10.0.0",
     "chalk": "^4.1.2",
