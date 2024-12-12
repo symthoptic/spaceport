@@ -15,7 +15,7 @@
 
            <div class="container mx-auto mt-1 text-center">
             <h2 class="title-page">Admin</h2>
-            <p class="text-gray">Use Heliactyl's admin settings.</p>
+            <p class="text-gray">Use Spaceport's admin settings.</p>
            </div>
            
             <!-- alert -->
@@ -85,7 +85,7 @@
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Heliactyl Information</h4>
+                  <h4 class="card-title">Spaceport Information</h4>
                   <form class="forms-sample">
                     <div class="form-group">
                     <p id="latestversion"><span>Fetching...</span></p>
@@ -93,7 +93,7 @@
                   </form>
                   <form class="forms-sample">
                     <div class="form-group">
-                        <a href="https://github.com/OvernodeProjets/Fixed-Heliactyl" class="btn btn-primary btn-lg">View latest version</a> <a href="https://overnode.fr/discord" class="btn btn-primary btn-lg">Get support</a>
+                        <a href="https://github.com/Symthoptic/spaceport" class="btn btn-primary btn-lg">View latest version</a> <a href="https://overnode.fr/discord" class="btn btn-primary btn-lg">Get support</a>
                     </div>
                   </form>
                </div>
@@ -306,7 +306,7 @@
     <!-- End plugin js for this page -->
     <%- include('./components/scripts') %>
     <script>
-      fetch("https://api.github.com/repos/OvernodeProjets/Fixed-Heliactyl/releases/latest")
+      fetch("https://api.github.com/repos/Symthoptic/spaceport/releases/latest")
        .then(response => response.json())
        .then(data => {
          let latestVersion = data.tag_name.replace('v', '');
